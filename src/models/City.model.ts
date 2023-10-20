@@ -12,8 +12,6 @@ export interface CityLocationData {
     };
 }
 
-
-// TODO: CORRIGIR O FELL TEMP
 export interface ICityCurrentConditions {
     EpochTime?: EpochTimeStamp;
     WeatherText?: string;
