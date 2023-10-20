@@ -7,6 +7,7 @@ import "@/lib/dayjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: "icon.png",
   title: "My city weather",
   description:
     "An App That Return's the time and current weather condition from a city",
