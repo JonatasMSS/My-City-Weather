@@ -6,6 +6,7 @@ import MiniData from "../components/city/MiniData";
 import PageSections from "./_Sections/PageSections";
 import { GetCurrentCondition } from "@/controllers/CitySearch.controller";
 import { GridAnimScroll } from "./anim/GridAnimScroll";
+import { ICityCurrentConditions } from "@/models/City.model";
 
 export default async function CityConditionPage({
   params,
