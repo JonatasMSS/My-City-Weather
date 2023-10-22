@@ -29,7 +29,7 @@ const Header = ({ cityName, state, dateTime = 0 }: HeaderProps) => {
       </div>
       {/* Hours */}
       <h2 className="text-2xl font-bold text-zinc-600">
-        Ultimo registro: {time.format("HH:mm A")}
+        Hora de previsão: {time.format("HH:mm A")}
       </h2>
     </div>
   );
