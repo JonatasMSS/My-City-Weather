@@ -1,5 +1,5 @@
 # My City Weather 
-Um website de previsão de tempo diário
+Um <a href="https://my-city-weather-zeta.vercel.app/search" target="_blank">website</a> de previsão de tempo diário
 
 # 🧠 Objetivos do projeto
 Entender o uso de *Api's* e aplicação de algumas animações no projeto
