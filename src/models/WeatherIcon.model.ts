@@ -11,10 +11,10 @@ export class WeatherIconImage{
 
     getIcon(){
         
-        if(this.WeatherIndexIcon <= 4 || (this.WeatherIndexIcon >= 33 && this.WeatherIndexIcon < 35)){
+        if(this.WeatherIndexIcon < 3 || (this.WeatherIndexIcon >= 33 && this.WeatherIndexIcon < 35)){
             return Sunny
         }
-        else if((this.WeatherIndexIcon <= 6 && this.WeatherIndexIcon >= 5 ) || (this.WeatherIndexIcon >= 35  && this.WeatherIndexIcon <= 37)){
+        else if((this.WeatherIndexIcon <= 6 && this.WeatherIndexIcon >= 3 ) || (this.WeatherIndexIcon >= 35  && this.WeatherIndexIcon <= 37)){
             return CloudySun
         }
         else if((this.WeatherIndexIcon >= 7 && this.WeatherIndexIcon <= 11) || this.WeatherIndexIcon ===38){

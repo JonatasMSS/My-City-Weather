@@ -1,5 +1,6 @@
 import { weather_api } from "@/lib/api";
-import { CityLocationData, ICityCurrentConditions, ICityForecastWeather } from "@/models/City.model";
+import { LimitOfAccess } from "@/lib/errors/LimitOfAcess.error";
+import { CityLocationData, ICityCurrentConditions, ICityDailyWeatherInfo, ICityForecastWeather } from "@/models/City.model";
 
 
 
@@ -18,7 +19,7 @@ export async function GetCurrentCondition(CityKey:string | number) {
     return current_conditions
    } catch (error:any) {
      if(error.response.status === 503) {
-        console.error(error.response)
+       
         throw new LimitOfAccess('O acesso a API foi restringido')
      }
     
@@ -44,4 +45,26 @@ export async function GetOneHourlyWeather(CityKey:string | number) {
      }
 
 
+}
+
+export async function GetOneDayWeather(CityKey:string | number) {
+
+
+      
+   try {
+      
+     const city_daily_weather:ICityDailyWeatherInfo = (await weather_api.get(`/forecasts/v1/daily/1day/${CityKey}?apikey=${process.env.NEXT_PUBLIC_API_WEATHER_KEY}&language=pt-br&metric=true`)).data
+
+
+     return city_daily_weather
+      
+
+     } catch (error:any) {
+       if(error.response.status === 503) {
+          console.error(error.response)
+          throw new LimitOfAccess('O acesso a API foi restringido')
+       }
+      
+     }
+   
 }
